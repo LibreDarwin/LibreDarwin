@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Define the remote source code servers -->
+  <remote name="AcademySoftwareFoundation" fetch="https://github.com" />
+  <remote name="ARM-software" fetch="https://github.com" />
+  <remote name="apple" fetch="https://github.com" />
+  <remote name="apple-oss-distributions" fetch="https://github.com" />
+  <remote name="castano" fetch="https://github.com" />
+  <remote name="ebiggers" fetch="https://github.com" />
+  <remote name="freebsd" fetch="https://github.com" />
+  <remote name="facebook" fetch="https://github.com" />
+  <remote name="git" fetch="https://github.com" />
+  <remote name="google" fetch="https://github.com" />
+  <remote name="JuliaHubOSS" fetch="https://github.com" />
+  <remote name="Kjuly" fetch="https://github.com" />
+  <remote name="LibreDarwin" fetch="https://github.com" />
+  <remote name="nothings" fetch="https://github.com" />
+  <remote name="PCRE2Project" fetch="https://github.com" />
+  <remote name="PureDarwin" fetch="https://github.com" />
+  <remote name="pygments" fetch="https://github.com" />
+  <remote name="python" fetch="https://github.com" />
+  <remote name="sqlite" fetch="https://github.com" />
+  <remote name="ThomasDickey" fetch="https://github.com" />
+  <remote name="trungnt2910" fetch="https://github.com" />
+
+  <!-- Set the default remote if not specified on the project entry -->
+  <default revision="master" remote="LibreDarwin" sync-j="4" />
+
+  <!-- =================================================================== -->
+  <!-- FreeBSD (BSD m4, msun, headers, etc.)                               -->
+  <!-- =================================================================== -->
+  <project path="DarwinSrc/FreeBSD" name="freebsd-src" remote="freebsd" revision="release/15.1.0" />
+
+  <!-- =================================================================== -->
+  <!-- Applications                                                        -->
+  <!-- =================================================================== -->
+  <project path="DarwinSrc/Applications/Sources/Chess" name="Chess" remote="apple-oss-distributions" revision="Chess-570.1" groups="apps" />
+
+  <!-- =================================================================== -->
+  <!-- ApplicationServices (Application & Graphical Framework Overrides)   -->
+  <!-- =================================================================== -->
+  <project path="DarwinSrc/ApplicationServices/Sources/AppKit" name="AppKit" remote="LibreDarwin" revision="AppKit-1" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/Cocoa" name="Cocoa" remote="LibreDarwin" revision="Cocoa-1" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/ImageKit" name="ImageKit" remote="LibreDarwin" revision="ImageKit-1" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/SwiftUI" name="SwiftUI" remote="LibreDarwin" revision="SwiftUI-1" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/UIKit" name="UIKit" remote="LibreDarwin" revision="UIKit-1" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/UserNotification" name="UserNotification" remote="apple-oss-distributions" revision="UserNotification-31" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/X11" name="X11" remote="apple-oss-distributions" revision="X11-0.46.4" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/X11apps" name="X11apps" remote="apple-oss-distributions" revision="X11apps-44" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/X11fonts" name="X11fonts" remote="apple-oss-distributions" revision="X11fonts-14" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/X11libs" name="X11libs" remote="apple-oss-distributions" revision="X11libs-60.2" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/X11misc" name="X11misc" remote="apple-oss-distributions" revision="X11misc-20" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/X11proto" name="X11proto" remote="apple-oss-distributions" revision="X11proto-57.2" groups="apps" />
+  <project path="DarwinSrc/ApplicationServices/Sources/X11server" name="X11server" remote="apple-oss-distributions" revision="X11server-106.7" groups="apps" />
+
+  <!-- =================================================================== -->
+  <!-- Boot                                                                -->
+  <!-- =================================================================== -->
+  <project path="DarwinSrc/Boot/Sources/boot" name="boot" remote="apple-oss-distributions" revision="boot-132" />
+  <project path="DarwinSrc/Boot/Sources/BootX" name="BootX" remote="apple-oss-distributions" revision="BootX-81" />
+  <project path="DarwinSrc/Boot/Sources/kc-tools" name="kc-tools" remote="PureDarwin" revision="master" />
+  <project path="DarwinSrc/Boot/Sources/uboot" name="uboot" remote="apple-oss-distributions" revision="uboot-2009.08.1" />
+  <project path="DarwinSrc/Boot/Sources/vzmac" name="vzmac" remote="LibreDarwin" revision="master" />
+  <project path="DarwinSrc/Boot/Sources/xnu-loader" name="xnu-loader" remote="PureDarwin" revision="master" />
+
+  <!-- =================================================================== -->
+  <!-- CoreOS (Pure Drivers & Framework Targets)                           -->
+  <!-- =================================================================== -->
+  <project path="DarwinSrc/CoreOS/ReleaseControl" name="ReleaseControl" remote="LibreDarwin" revision="master" groups="base,coreos" />
+
+  <project path="DarwinSrc/CoreOS/Sources/adv_cmds" name="adv_cmds" remote="apple-oss-distributions" revision="adv_cmds-237" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AKCmds" name="AKCmds" remote="LibreDarwin" revision="master" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/am_utils" name="am_utils" remote="apple-oss-distributions" revision="am_utils-8" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/APFS" name="apfs-driver" remote="LibreDarwin" revision="master" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Apple16X50Serial" name="Apple16X50Serial" remote="apple-oss-distributions" revision="Apple16X50Serial-24" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleAPIC" name="AppleAPIC" remote="apple-oss-distributions" revision="AppleAPIC-13" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleFileSystemDriver" name="AppleFileSystemDriver" remote="apple-oss-distributions" revision="AppleFileSystemDriver-31" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleFlashNVRAM" name="AppleFlashNVRAM" remote="apple-oss-distributions" revision="AppleFlashNVRAM-105.4.0" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleGPIO" name="AppleGPIO" remote="apple-oss-distributions" revision="AppleGPIO-131.0.0" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleHWSensor" name="AppleHWSensor" remote="apple-oss-distributions" revision="AppleHWSensor-193" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleI2C" name="AppleI2C" remote="apple-oss-distributions" revision="AppleI2C-400.0.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleI386GenericPlatform" name="AppleI386GenericPlatform" remote="apple-oss-distributions" revision="AppleI386GenericPlatform-5" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleI386PCI" name="AppleI386PCI" remote="apple-oss-distributions" revision="AppleI386PCI-6" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleMTRRSupport" name="AppleMTRRSupport" remote="apple-oss-distributions" revision="AppleMTRRSupport-4" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleOnboardPCATA" name="AppleOnboardPCATA" remote="apple-oss-distributions" revision="AppleOnboardPCATA-2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleRAID" name="AppleRAID" remote="apple-oss-distributions" revision="AppleRAID-26" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleRS232Serial" name="AppleRS232Serial" remote="apple-oss-distributions" revision="AppleRS232Serial-130.2.7" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleRTL8139Ethernet" name="AppleRTL8139Ethernet" remote="apple-oss-distributions" revision="AppleRTL8139Ethernet-153" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleSCCSerial" name="AppleSCCSerial" remote="apple-oss-distributions" revision="AppleSCCSerial-132.4.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleSMBIOS" name="AppleSMBIOS" remote="apple-oss-distributions" revision="AppleSMBIOS-42" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleSym8xx" name="AppleSym8xx" remote="apple-oss-distributions" revision="AppleSym8xx-122.3.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleTalk" name="AppleTalk" remote="apple-oss-distributions" revision="AppleTalk-95" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleThermal" name="AppleThermal" remote="apple-oss-distributions" revision="AppleThermal-101.3.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleUSBCDCDriver" name="AppleUSBCDCDriver" remote="apple-oss-distributions" revision="AppleUSBCDCDriver-4303.2.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleUSBIrDA" name="AppleUSBIrDA" remote="apple-oss-distributions" revision="AppleUSBIrDA-147" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleUSBProKeyboard" name="AppleUSBProKeyboard" remote="apple-oss-distributions" revision="AppleUSBProKeyboard-203.4.0" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleVIA" name="AppleVIA" remote="apple-oss-distributions" revision="AppleVIA-151.0.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AppleVIAATA" name="AppleVIAATA" remote="apple-oss-distributions" revision="AppleVIAATA-6" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/apr" name="apr" remote="apple-oss-distributions" revision="apr-46" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/architecture" name="architecture" remote="apple-oss-distributions" revision="architecture-282" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/autofs" name="autofs" remote="apple-oss-distributions" revision="autofs-322" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/automount" name="automount" remote="apple-oss-distributions" revision="automount-133.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/AvailabilityVersions" name="AvailabilityVersions" remote="apple-oss-distributions" revision="AvailabilityVersions-157.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/awk" name="awk" remote="apple-oss-distributions" revision="awk-40" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/bash" name="bash" remote="apple-oss-distributions" revision="bash-144" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/basic_cmds" name="basic_cmds" remote="apple-oss-distributions" revision="basic_cmds-70" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/bc" name="bc" remote="apple-oss-distributions" revision="bc-35" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/bless" name="bless" remote="apple-oss-distributions" revision="bless-331.100.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/bmalloc" name="bmalloc" remote="apple-oss-distributions" revision="bmalloc-7611.3.10.1.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/BomCmds" name="BomCmds" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/BootCache" name="BootCache" remote="apple-oss-distributions" revision="BootCache-162" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/bsdmanpages" name="bsdmanpages" remote="apple-oss-distributions" revision="bsdmanpages-56" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/bsm" name="bsm" remote="apple-oss-distributions" revision="bsm-13" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/bzip2" name="bzip2" remote="apple-oss-distributions" revision="bzip2-49" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/cddafs" name="cddafs" remote="apple-oss-distributions" revision="cddafs-272" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/CF" name="CF" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/CFCmds" name="cf_cmds" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/CFNetwork" name="CFNetwork" remote="apple-oss-distributions" revision="CFNetwork-129.20" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/CMD646ATA" name="CMD646ATA" remote="apple-oss-distributions" revision="CMD646ATA-107.3.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/CodeSignKit" name="CodeSignKit" remote="apple-oss-distributions" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/CommonCrypto" name="CommonCrypto" remote="apple-oss-distributions" revision="CommonCrypto-600035" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/configd" name="configd" remote="apple-oss-distributions" revision="configd-1405.120.5" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/configd_plugins" name="configd_plugins" remote="apple-oss-distributions" revision="configd_plugins-75.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/copyfile" name="copyfile" remote="apple-oss-distributions" revision="copyfile-240" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/CoreAnalytics" name="CoreAnalytics" remote="apple-oss-distributions" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/corecrypto" name="corecrypto" remote="apple" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/coreTLS" name="coreTLS" remote="apple-oss-distributions" revision="coreTLS-167" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/CrackLib" name="CrackLib" remote="apple-oss-distributions" revision="CrackLib-37766" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/CrashReporterClient" name="CrashReporterClient" remote="apple-oss-distributions" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/cron" name="cron" remote="apple-oss-distributions" revision="cron-52" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Csu" name="Csu" remote="apple-oss-distributions" revision="Csu-88" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/curl" name="curl" remote="apple-oss-distributions" revision="curl-166.0.0.0.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/DarwinTools" name="DarwinTools" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/dcerpc" name="dcerpc" remote="apple-oss-distributions" revision="dcerpc-96" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/distnoted" name="ddistnoted" remote="PureDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/DirectoryService" name="DirectoryService" remote="apple-oss-distributions" revision="DirectoryService-655" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/DiskArbitration" name="DiskArbitration" remote="apple-oss-distributions" revision="DiskArbitration-535.120.1.0.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/diskdev_cmds" name="diskdev_cmds" remote="apple-oss-distributions" revision="diskdev_cmds-757" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/disklabel" name="disklabel" remote="apple-oss-distributions" revision="disklabel-7" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/doc_cmds" name="doc_cmds" remote="apple-oss-distributions" revision="doc_cmds-69" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/drvAppleCMD646Root" name="drvAppleCMD646Root" remote="apple-oss-distributions" revision="drvAppleCMD646Root-104.2.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/DSAgent" name="DSAgent" remote="apple-oss-distributions" revision="DSAgent-37" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/DSLDAPPlugIn" name="DSLDAPPlugIn" remote="apple-oss-distributions" revision="DSLDAPPlugIn-136" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/DSLDAPv3PlugIn" name="DSLDAPv3PlugIn" remote="apple-oss-distributions" revision="DSLDAPv3PlugIn-42.9" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/DSNISPlugin" name="DSNISPlugin" remote="apple-oss-distributions" revision="DSNISPlugin-17.7" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/DSNSLPlugins" name="DSNSLPlugins" remote="apple-oss-distributions" revision="DSNSLPlugins-115.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/DSPasswordServerPlugin" name="DSPasswordServerPlugin" remote="apple-oss-distributions" revision="DSPasswordServerPlugin-281.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/DSTools" name="DSTools" remote="apple-oss-distributions" revision="DSTools-162" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/dtrace" name="dtrace" remote="apple-oss-distributions" revision="dtrace-413" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/dyld" name="dyld" remote="apple-oss-distributions" revision="dyld-1378" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/DynamicPowerStep" name="DynamicPowerStep" remote="apple-oss-distributions" revision="DynamicPowerStep-1.6.0" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/eap8021x" name="eap8021x" remote="apple-oss-distributions" revision="eap8021x-368.120.2.0.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/emacs" name="emacs" remote="apple-oss-distributions" revision="emacs-96.250.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/enscript" name="enscript" remote="apple-oss-distributions" revision="enscript-15" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/expat" name="expat" remote="apple-oss-distributions" revision="expat-47" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/expect" name="expect" remote="apple-oss-distributions" revision="expect-1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/ext2fs" name="ext2fs" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/file" name="file" remote="apple-oss-distributions" revision="file-106" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/file_cmds" name="file_cmds" remote="apple-oss-distributions" revision="file_cmds-479" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/files" name="files" remote="apple-oss-distributions" revision="files-974.120.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/foundation_cmds" name="foundation_cmds" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/FSKit" name="FSKit" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/gnudiff" name="gnudiff" remote="apple-oss-distributions" revision="gnudiff-35" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/gnuserv" name="gnuserv" remote="apple-oss-distributions" revision="gnuserv-7" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/gnutar" name="gnutar" remote="apple-oss-distributions" revision="gnutar-455" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/gnuzip" name="gnuzip" remote="apple-oss-distributions" revision="gnuzip-31" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/gpt" name="gpt" remote="apple-oss-distributions" revision="gpt-24" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/grep" name="grep" remote="apple-oss-distributions" revision="grep-28" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/groff" name="groff" remote="apple-oss-distributions" revision="groff-41" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/gssd" name="gssd" remote="apple-oss-distributions" revision="gssd-85" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Heimdal" name="Heimdal" remote="apple-oss-distributions" revision="Heimdal-710.100.4" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/hfs" name="hfs" remote="apple-oss-distributions" revision="hfs-715.120.4" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/hunspell" name="hunspell" remote="apple-oss-distributions" revision="hunspell-16" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/ICU" name="ICU" remote="apple-oss-distributions" revision="ICU-76142.5.1.200" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOACPIFamily" name="IOACPIFamily" remote="apple-oss-distributions" revision="IOACPIFamily-8" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOATABlockStorage" name="IOATABlockStorage" remote="apple-oss-distributions" revision="IOATABlockStorage-130.3.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOATAFamily" name="IOATAFamily" remote="apple-oss-distributions" revision="IOATAFamily-264" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOATAPIProtocolTransport" name="IOATAPIProtocolTransport" remote="apple-oss-distributions" revision="IOATAPIProtocolTransport-354" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOAudioFamily" name="IOAudioFamily" remote="apple-oss-distributions" revision="IOAudioFamily-740.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOBDStorageFamily" name="IOBDStorageFamily" remote="apple-oss-distributions" revision="IOBDStorageFamily-26" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOCDStorageFamily" name="IOCDStorageFamily" remote="apple-oss-distributions" revision="IOCDStorageFamily-62" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/iodbc" name="iodbc" remote="apple-oss-distributions" revision="iodbc-42.6" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IODVDStorageFamily" name="IODVDStorageFamily" remote="apple-oss-distributions" revision="IODVDStorageFamily-46" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOFireWireAVC" name="IOFireWireAVC" remote="apple-oss-distributions" revision="IOFireWireAVC-436" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOFireWireFamily" name="IOFireWireFamily" remote="apple-oss-distributions" revision="IOFireWireFamily-492" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOFireWireSerialBusProtocolTransport" name="IOFireWireSerialBusProtocolTransport" remote="apple-oss-distributions" revision="IOFireWireSerialBusProtocolTransport-262" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOFWDVComponents" name="IOFWDVComponents" remote="apple-oss-distributions" revision="IOFWDVComponents-208" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOGraphics" name="IOGraphics" remote="apple-oss-distributions" revision="IOGraphics-600" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOHIDFamily" name="IOHIDFamily" remote="apple-oss-distributions" revision="IOHIDFamily-2238.120.5" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOI2CFamily" name="IOI2CFamily" remote="apple-oss-distributions" revision="IOI2CFamily-111.0.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOKitTools" name="IOKitTools" remote="apple-oss-distributions" revision="IOKitTools-125" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOKitUser" name="IOKitUser" remote="apple-oss-distributions" revision="IOKitUser-100231.120.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IONetworkingFamily" name="IONetworkingFamily" remote="apple-oss-distributions" revision="IONetworkingFamily-188" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOPCIFamily" name="IOPCIFamily" remote="apple-oss-distributions" revision="IOPCIFamily-726.100.6" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOSCSIArchitectureModelFamily" name="IOSCSIArchitectureModelFamily" remote="apple-oss-distributions" revision="IOSCSIArchitectureModelFamily-139.0.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOSCSIParallelFamily" name="IOSCSIParallelFamily" remote="apple-oss-distributions" revision="IOSCSIParallelFamily-352" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOSerialFamily" name="IOSerialFamily" remote="apple-oss-distributions" revision="IOSerialFamily-93.200.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOStorageFamily" name="IOStorageFamily" remote="apple-oss-distributions" revision="IOStorageFamily-337.100.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOUSBFamily" name="IOUSBFamily" remote="apple-oss-distributions" revision="IOUSBFamily-630.4.5" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IOUSBMassStorageClass" name="IOUSBMassStorageClass" remote="apple-oss-distributions" revision="IOUSBMassStorageClass-408" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/IPFirewall" name="IPFirewall" remote="apple-oss-distributions" revision="IPFirewall-17" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/ipsec" name="ipsec" remote="apple-oss-distributions" revision="ipsec-1125" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/ipv6configuration" name="ipv6configuration" remote="apple-oss-distributions" revision="ipv6configuration-31.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/isoutil" name="isoutil" remote="apple-oss-distributions" revision="isoutil-34" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Kerberos" name="Kerberos" remote="apple-oss-distributions" revision="Kerberos-75.10.11" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/KerberosHelper" name="KerberosHelper" remote="apple-oss-distributions" revision="KerberosHelper-165" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/KerberosLibraries" name="KerberosLibraries" remote="apple-oss-distributions" revision="KerberosLibraries-81.46.4" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/KeyLargoATA" name="KeyLargoATA" remote="apple-oss-distributions" revision="KeyLargoATA-111.3.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/keymaps" name="keymaps" remote="apple-oss-distributions" revision="keymaps-31" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/keymgr" name="keymgr" remote="apple-oss-distributions" revision="keymgr-31" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/ksh" name="ksh" remote="apple-oss-distributions" revision="ksh-42" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/launchd" name="launchd" remote="apple-oss-distributions" revision="launchd-842.92.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/less" name="less" remote="apple-oss-distributions" revision="less-50" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libapfsrw" name="libapfsrw" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libarchive" name="libarchive" remote="apple-oss-distributions" revision="libarchive-167.120.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libauto" name="libauto" remote="apple-oss-distributions" revision="libauto-187" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libc" name="Libc" remote="apple-oss-distributions" revision="Libc-1752.120.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libclosure" name="libclosure" remote="apple-oss-distributions" revision="libclosure-96" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libcompat" name="Libcompat" remote="apple-oss-distributions" revision="Libcompat-14.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libcoreservices" name="Libcoreservices" remote="PureDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libcpp" name="libcpp" remote="apple-oss-distributions" revision="libcpp-31" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libcpp_kext" name="libcpp_kext" remote="apple-oss-distributions" revision="Libcpp_kext-8" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libcppabi" name="libcppabi" remote="apple-oss-distributions" revision="libcppabi-26" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libcurses" name="Libcurses" remote="apple-oss-distributions" revision="Libcurses-24" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libdarwin" name="Libdarwin" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/LibDER" name="LibDER" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libdispatch" name="libdispatch" remote="apple-oss-distributions" revision="libdispatch-1542.100.32" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libedit" name="libedit" remote="apple-oss-distributions" revision="libedit-65" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libevent" name="libevent" remote="apple-oss-distributions" revision="libevent-13" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libfeatureflags" name="libfeatureflags" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libffi" name="libffi" remote="apple-oss-distributions" revision="libffi-40" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libfs" name="libfs" remote="apple-oss-distributions" revision="libfs-35" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libgcc" name="libgcc" remote="apple-oss-distributions" revision="libgcc-14.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libiconv" name="libiconv" remote="apple-oss-distributions" revision="libiconv-115.120.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libinfo" name="Libinfo" remote="apple-oss-distributions" revision="Libinfo-600" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libkvm" name="Libkvm" remote="apple-oss-distributions" revision="Libkvm-25" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libm" name="Libm" remote="apple-oss-distributions" revision="Libm-2026" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libmalloc" name="libmalloc" remote="apple-oss-distributions" revision="libmalloc-812.100.31" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libmd" name="libmd" remote="apple-oss-distributions" revision="libmd-7" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libpcap" name="libpcap" remote="apple-oss-distributions" revision="libpcap-146" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libresolv" name="libresolv" remote="apple-oss-distributions" revision="libresolv-96" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Librpcsvc" name="Librpcsvc" remote="apple-oss-distributions" revision="Librpcsvc-31" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_agent" name="libsecurity_agent" remote="apple-oss-distributions" revision="libsecurity_agent-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_apple_csp" name="libsecurity_apple_csp" remote="apple-oss-distributions" revision="libsecurity_apple_csp-55003" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_apple_cspdl" name="libsecurity_apple_cspdl" remote="apple-oss-distributions" revision="libsecurity_apple_cspdl-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_apple_file_dl" name="libsecurity_apple_file_dl" remote="apple-oss-distributions" revision="libsecurity_apple_file_dl-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_apple_x509_cl" name="libsecurity_apple_x509_cl" remote="apple-oss-distributions" revision="libsecurity_apple_x509_cl-55004" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_apple_x509_tp" name="libsecurity_apple_x509_tp" remote="apple-oss-distributions" revision="libsecurity_apple_x509_tp-55009.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_asn1" name="libsecurity_asn1" remote="apple-oss-distributions" revision="libsecurity_asn1-55000.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_authorization" name="libsecurity_authorization" remote="apple-oss-distributions" revision="libsecurity_authorization-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_cdsa_client" name="libsecurity_cdsa_client" remote="apple-oss-distributions" revision="libsecurity_cdsa_client-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_cdsa_plugin" name="libsecurity_cdsa_plugin" remote="apple-oss-distributions" revision="libsecurity_cdsa_plugin-55001" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_cdsa_utilities" name="libsecurity_cdsa_utilities" remote="apple-oss-distributions" revision="libsecurity_cdsa_utilities-55006" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_cdsa_utils" name="libsecurity_cdsa_utils" remote="apple-oss-distributions" revision="libsecurity_cdsa_utils-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_checkpw" name="libsecurity_checkpw" remote="apple-oss-distributions" revision="libsecurity_checkpw-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_cms" name="libsecurity_cms" remote="apple-oss-distributions" revision="libsecurity_cms-55002.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_codesigning" name="libsecurity_codesigning" remote="apple-oss-distributions" revision="libsecurity_codesigning-55037.15" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_cssm" name="libsecurity_cssm" remote="apple-oss-distributions" revision="libsecurity_cssm-55005.5" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_dotmacdl" name="libsecurity_dotmacdl" remote="apple-oss-distributions" revision="libsecurity_dotmacdl-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_filedb" name="libsecurity_filedb" remote="apple-oss-distributions" revision="libsecurity_filedb-55016.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_filevault" name="libsecurity_filevault" remote="apple-oss-distributions" revision="libsecurity_filevault-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_keychain" name="libsecurity_keychain" remote="apple-oss-distributions" revision="libsecurity_keychain-55050.9" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_ldap_dl" name="libsecurity_ldap_dl" remote="apple-oss-distributions" revision="libsecurity_ldap_dl-55005.0.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_manifest" name="libsecurity_manifest" remote="apple-oss-distributions" revision="libsecurity_manifest-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_mds" name="libsecurity_mds" remote="apple-oss-distributions" revision="libsecurity_mds-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_ocspd" name="libsecurity_ocspd" remote="apple-oss-distributions" revision="libsecurity_ocspd-55010" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_pkcs12" name="libsecurity_pkcs12" remote="apple-oss-distributions" revision="libsecurity_pkcs12-55000" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_sd_cspdl" name="libsecurity_sd_cspdl" remote="apple-oss-distributions" revision="libsecurity_sd_cspdl-55003" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_smime" name="libsecurity_smime" remote="apple-oss-distributions" revision="libsecurity_smime-55004.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_ssl" name="libsecurity_ssl" remote="apple-oss-distributions" revision="libsecurity_ssl-55003" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurity_utilities" name="libsecurity_utilities" remote="apple-oss-distributions" revision="libsecurity_utilities-55030.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libsecurityd" name="libsecurityd" remote="apple-oss-distributions" revision="libsecurityd-55004" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libsystem" name="Libsystem" remote="apple-oss-distributions" revision="Libsystem-1356" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libsystem_trace" name="Libsystem_trace" remote="apple-oss-distributions" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libstreams" name="Libstreams" remote="apple-oss-distributions" revision="Libstreams-25" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libplatform" name="Libplatform" remote="apple-oss-distributions" revision="libplatform-375.120.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libpthread" name="libpthread" remote="apple-oss-distributions" revision="libpthread-539.100.4" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libtelnet" name="libtelnet" remote="apple-oss-distributions" revision="libtelnet-13" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libtrace" name="Libtrace" remote="PureDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libunwind" name="libdispatch" remote="apple-oss-distributions" revision="libdispatch-1542.100.32" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libutil" name="libutil" remote="apple-oss-distributions" revision="libutil-73" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libwrappers" name="Libwrappers" remote="apple-oss-distributions" revision="Libwrappers-9" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/libxml2" name="libxml2" remote="apple-oss-distributions" revision="libxml2-39.10" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Libxpc" name="Libxpc" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Liby" name="Liby" remote="apple-oss-distributions" revision="Liby-21" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/lsof" name="lsof" remote="apple-oss-distributions" revision="lsof-76" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/lukemftpd" name="lukemftpd" remote="apple-oss-distributions" revision="lukemftpd-51" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/mail_cmds" name="mail_cmds" remote="apple-oss-distributions" revision="mail_cmds-43" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/man" name="man" remote="apple-oss-distributions" revision="man-62" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/mDNSResponder" name="mDNSResponder" remote="apple-oss-distributions" revision="mDNSResponder-2881.120.11" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/memberd" name="memberd" remote="apple-oss-distributions" revision="memberd-21.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/misc_cmds" name="misc_cmds" remote="apple-oss-distributions" revision="misc_cmds-45" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/MITKerberosShim" name="MITKerberosShim" remote="apple-oss-distributions" revision="MITKerberosShim-88" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/modemccl" name="modemccl" remote="apple-oss-distributions" revision="modemccl-34" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/msdosfs" name="msdosfs" remote="apple-oss-distributions" revision="msdosfs-788.100.31" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/nano" name="nano" remote="apple-oss-distributions" revision="nano-12" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/ncftp" name="ncftp" remote="apple-oss-distributions" revision="ncftp-6" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/ncurses" name="ncurses" remote="apple-oss-distributions" revision="ncurses-79" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/neon" name="neon" remote="apple-oss-distributions" revision="neon-11.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/netcat" name="netcat" remote="apple-oss-distributions" revision="netcat-56" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/netinfo" name="netinfo" remote="apple-oss-distributions" revision="netinfo-384" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/network_cmds" name="network_cmds" remote="apple-oss-distributions" revision="network_cmds-741.100.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/NFS" name="NFS" remote="apple-oss-distributions" revision="NFS-343.100.5" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/NKEMgr" name="NKEMgr" remote="apple-oss-distributions" revision="NKEMgr-5.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/ntfs" name="ntfs" remote="apple-oss-distributions" revision="ntfs-168" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/ntp" name="ntp" remote="apple-oss-distributions" revision="ntp-139" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/OpenAL" name="OpenAL" remote="apple-oss-distributions" revision="OpenAL-71" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/OpenBSM" name="OpenBSM" remote="apple-oss-distributions" revision="OpenBSM-21" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/OpenDirectory" name="OpenDirectory" remote="apple-oss-distributions" revision="OpenDirectory-146" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/OpenLDAP" name="OpenLDAP" remote="apple-oss-distributions" revision="OpenLDAP-561" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/openmpi" name="openmpi" remote="apple-oss-distributions" revision="openmpi-8" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/OpenPAM" name="OpenPAM" remote="apple-oss-distributions" revision="OpenPAM-35" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/OpenSSH" name="OpenSSH" remote="apple-oss-distributions" revision="OpenSSH-354.120.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/OpenSSL" name="OpenSSL" remote="apple-oss-distributions" revision="OpenSSL-46" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/OpenSSL097" name="OpenSSL097" remote="apple-oss-distributions" revision="OpenSSL097-105" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/OpenSSL098" name="OpenSSL098" remote="apple-oss-distributions" revision="OpenSSL098-85" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/pam" name="pam" remote="apple-oss-distributions" revision="pam-32.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/pam_modules" name="pam_modules" remote="apple-oss-distributions" revision="pam_modules-217.100.6" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/passwordserver_sasl" name="passwordserver_sasl" remote="apple-oss-distributions" revision="passwordserver_sasl-215" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/patch_cmds" name="patch_cmds" remote="apple-oss-distributions" revision="patch_cmds-75" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/pcre" name="pcre" remote="apple-oss-distributions" revision="pcre-21" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/pcre2" name="pcre2" remote="PCRE2Project" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/pdisk" name="pdisk" remote="apple-oss-distributions" revision="pdisk-10" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/perl" name="perl" remote="apple-oss-distributions" revision="perl-175" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/pkg" name="pkg" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/pkg_utils" name="pkg_utils" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/PListBuddy" name="PListBuddy" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/portmap" name="portmap" remote="apple-oss-distributions" revision="portmap-39" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/PowerManagement" name="PowerManagement" remote="apple-oss-distributions" revision="PowerManagement-1846.120.8.0.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/prebind" name="prebind" remote="apple-oss-distributions" revision="prebind-109.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/python" name="python" remote="apple-oss-distributions" revision="python-184" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/python23" name="python23" remote="apple-oss-distributions" revision="python23-21" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/remote_cmds" name="remote_cmds" remote="apple-oss-distributions" revision="remote_cmds-308" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/removefile" name="removefile" remote="apple-oss-distributions" revision="removefile-85.100.6" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/rsync" name="rsync" remote="apple-oss-distributions" revision="rsync-184" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/ruby" name="ruby" remote="apple-oss-distributions" revision="ruby-175" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/screen" name="screen" remote="apple-oss-distributions" revision="screen-29" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SCSIHeaderInstaller" name="SCSIHeaderInstaller" remote="apple-oss-distributions" revision="SCSIHeaderInstaller-100.0.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Security" name="Security" remote="apple-oss-distributions" revision="Security-61901.120.67" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/security_authtrampoline" name="security_authtrampoline" remote="apple-oss-distributions" revision="security_authtrampoline-55106" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/security_certificates" name="security_certificates" remote="apple-oss-distributions" revision="security_certificates-55349.120.10" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/security_certtool" name="security_certtool" remote="apple-oss-distributions" revision="security_certtool-55121" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/security_crlrefresh" name="security_crlrefresh" remote="apple-oss-distributions" revision="security_crlrefresh-55103" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/security_dotmac_tp" name="security_dotmac_tp" remote="apple-oss-distributions" revision="security_dotmac_tp-55107.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/security_ocspd" name="security_ocspd" remote="apple-oss-distributions" revision="security_ocspd-55148" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/security_privportserver" name="security_privportserver" remote="apple-oss-distributions" revision="security_privportserver-24739" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/security_systemkeychain" name="security_systemkeychain" remote="apple-oss-distributions" revision="security_systemkeychain-55214.100.2" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/securityd" name="securityd" remote="apple-oss-distributions" revision="securityd-55199.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SecurityNssAsn1" name="SecurityNssAsn1" remote="apple-oss-distributions" revision="SecurityNssAsn1-12" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SecurityNssPkcs12" name="SecurityNssPkcs12" remote="apple-oss-distributions" revision="SecurityNssPkcs12-7" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SecurityNssSmime" name="SecurityNssSmime" remote="apple-oss-distributions" revision="SecurityNssSmime-11" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SecurityTokend" name="SecurityTokend" remote="apple-oss-distributions" revision="SecurityTokend-55113" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SecurityTool" name="SecurityTool" remote="apple-oss-distributions" revision="SecurityTool-55115" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SharedIP" name="SharedIP" remote="apple-oss-distributions" revision="SharedIP-58" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/shell_cmds" name="shell_cmds" remote="apple-oss-distributions" revision="shell_cmds-329" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SmartcardCCID" name="SmartcardCCID" remote="apple-oss-distributions" revision="SmartcardCCID-55036" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SmartCardServices" name="SmartCardServices" remote="apple-oss-distributions" revision="SmartCardServices-55111" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/srm" name="srm" remote="apple-oss-distributions" revision="srm-7" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Startup" name="Startup" remote="apple-oss-distributions" revision="Startup-177.8" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/stmalloc" name="stmalloc" remote="apple-oss-distributions" revision="stmalloc-4" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/sudo" name="sudo" remote="apple-oss-distributions" revision="sudo-114.100.11" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SULongDoubleCompat" name="SULongDoubleCompat" remote="apple-oss-distributions" revision="SULongDoubleCompat-1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SymptomReporter" name="SymptomReporter" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/syslog" name="syslog" remote="apple-oss-distributions" revision="syslog-406" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/system_cmds" name="system_cmds" remote="apple-oss-distributions" revision="system_cmds-1042.120.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/system_config" name="system_config" remote="apple-oss-distributions" revision="system_config-57" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SystemConfiguration" name="SystemConfiguration" remote="LibreDarwin" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/system_cmds" name="system_cmds" remote="apple-oss-distributions" revision="system_cmds-1042.120.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SystemKEXT" name="SystemKEXT" remote="apple-oss-distributions" revision="SystemKEXT-23.3" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/SystemStubs" name="SystemStubs" remote="apple-oss-distributions" revision="SystemStubs-6" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/TargetConfig" name="TargetConfig" remote="apple-oss-distributions" revision="TargetConfig-14" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/tcl" name="tcl" remote="apple-oss-distributions" revision="tcl-152" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/tcp_wrappers" name="tcp_wrappers" remote="apple-oss-distributions" revision="tcp_wrappers-20" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/tcpdump" name="tcpdump" remote="apple-oss-distributions" revision="tcpdump-158" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/tcsh" name="tcsh" remote="apple-oss-distributions" revision="tcsh-75" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/text_cmds" name="text_cmds" remote="apple-oss-distributions" revision="text_cmds-199" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/TimeZoneData" name="TimeZoneData" remote="apple-oss-distributions" revision="TimeZoneData-107" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/Tokend" name="Tokend" remote="apple-oss-distributions" revision="Tokend-40596" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/usertemplate" name="usertemplate" remote="apple-oss-distributions" revision="usertemplate-109" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/usrtemplate" name="usrtemplate" remote="apple-oss-distributions" revision="usrtemplate-10" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/uucp" name="uucp" remote="apple-oss-distributions" revision="uucp-22" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/vi" name="vi" remote="apple-oss-distributions" revision="vi-7" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/vim" name="vim" remote="apple-oss-distributions" revision="vim-167" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/volfs" name="volfs" remote="apple-oss-distributions" revision="volfs-26" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/webdavfs" name="webdavfs" remote="apple-oss-distributions" revision="webdavfs-403.100.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/WirelessDiagnostics" name="WirelessDiagnostics" remote="apple-oss-distributions" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/xar" name="xar" remote="apple-oss-distributions" revision="xar-503" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/xelf" name="xelf" remote="apple-oss-distributions" revision="xelf-1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/zfs" name="zfs" remote="apple-oss-distributions" revision="main" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/zip" name="zip" remote="apple-oss-distributions" revision="zip-33" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/zlib" name="zlib" remote="apple-oss-distributions" revision="zlib-100.120.1" groups="coreos" />
+  <project path="DarwinSrc/CoreOS/Sources/zsh" name="zsh" remote="apple-oss-distributions" revision="zsh-118" groups="coreos" />
+
+  <!-- =================================================================== -->
+  <!-- CoreServices                                                        -->
+  <!-- =================================================================== -->
+  <project path="DarwinSrc/CoreServices/Sources/CarbonCore" name="CarbonCore" remote="LibreDarwin" revision="main" groups="coreservices" />
+  <project path="DarwinSrc/CoreServices/Sources/CarbonCore" name="CarbonHeaders" remote="apple-oss-distributions" revision="CarbonHeaders-18.1" groups="coreservices" />
+  <project path="DarwinSrc/CoreServices/Sources/Foundation" name="Foundation" remote="LibreDarwin" revision="master" groups="coreservices" />
+
+  <!-- =================================================================== -->
+  <!-- DEVELOPER TOOLS LAYER                                               -->
+  <!-- =================================================================== -->
+  <project path="DarwinSrc/DeveloperTools/Sources/astc-encoder" name="astc-encoder" remote="ARM-software" revision="5.7.0" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/autoconf" name="autoconf" remote="apple-oss-distributions" revision="autoconf-17.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/automake" name="autoconf" remote="apple-oss-distributions" revision="autoconf-17.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/bison" name="bison" remote="apple-oss-distributions" revision="bison-16" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/bmake" name="bmake" remote="LibreDarwin" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/bootstrap_cmds" name="bootstrap_cmds" remote="apple-oss-distributions" revision="bootstrap_cmds-136" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/bsdmake" name="bsdmake" remote="apple-oss-distributions" revision="bsdmake-24" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/byacc" name="byacc-snapshots" remote="ThomasDickey" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/cctools" name="cctools" remote="apple-oss-distributions" revision="cctools-1035.1.102" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/CoreOSMakefiles" name="CoreOSMakefiles" remote="apple-oss-distributions" revision="CoreOSMakefiles-79" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/cpython" name="cpython" remote="python" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/DVTFoundation" name="DVTFoundation" remote="LibreDarwin" revision="main" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/developer_cmds" name="developer_cmds" remote="apple-oss-distributions" revision="developer_cmds-89" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/etc2comp" name="etc2comp" remote="google" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/flex" name="flex" remote="apple-oss-distributions" revision="flex-35" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/Git" name="Git" remote="apple-oss-distributions" revision="Git-155" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/git-core" name="git" remote="git" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/gm4" name="gm4" remote="apple-oss-distributions" revision="gm4-20" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/gnumake" name="gnumake" remote="apple-oss-distributions" revision="gnumake-136" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/gperf" name="gperf" remote="apple-oss-distributions" revision="gperf-15" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/headerdoc" name="headerdoc" remote="apple-oss-distributions" revision="headerdoc-8.9.32" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/IDETools" name="IDETools" remote="LibreDarwin" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/Imath" name="Imath" remote="AcademySoftwareFoundation" revision="main" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/indexstore-db" name="indexstore-db" remote="swiftlang" revision="main" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/ld64" name="ld64" remote="apple-oss-distributions" revision="ld64-957.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/libdeflate" name="libdeflate" remote="ebiggers" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/libgit2" name="libgit2" remote="apple-oss-distributions" revision="libgit2-30" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/lldb" name="lldb" remote="apple-oss-distributions" revision="lldb-300.2.47" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/llvm-cbe" name="llvm-cbe" remote="JuliaHubOSS" revision="main" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/llvmCore" name="llvm-project" remote="swiftlang" revision="" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/nvidia-texture-tools" name="nvidia-texture-tools" remote="castano" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/openexr" name="openexr" remote="AcademySoftwareFoundation" revision="v3.5.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/pb_makefiles" name="pb_makefiles" remote="apple-oss-distributions" revision="pb_makefiles-1009" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/pngcrush" name="pngcrush" remote="Kjuly" revision="1.8.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/pygments" name="pygments" remote="pygments" revision="2.21.0" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/sourcekit-lsp" name="sourcekit-lsp" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/sqlite" name="sqlite" remote="sqlite" revision="vesion-3.45.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/stb" name="stb" remote="nothings" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift" name="swift" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-argument-parser" name="swift-argument-parser" remote="apple" revision="1.8.2" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-asn1" name="swift-asn1" remote="apple" revision="1.3.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-atomics" name="swift-atomics" remote="apple" revision="1.8.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-build" name="swift-build" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-certificates" name="swift-certificates" remote="apple" revision="1.21.0" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-cmark" name="swift-cmark" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-collections" name="swift-collections" remote="apple" revision="1.7.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-corelibs-blocksruntime" name="swift-corelibs-blocksruntime" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-corelibs-foundation" name="swift-corelibs-foundation" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-corelibs-libdispatch" name="swift-corelibs-libdispatch" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-corelibs-xctest" name="swift-corelibs-xctest" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-crypto" name="swift-crypto" remote="apple" revision="5.0.0" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-darwin-overlay" name="swift-darwin-overlay" remote="LibreDarwin" revision="swift-darwin-overlay-1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-docc" name="swift-docc" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-docc-render-artifact" name="swift-docc-render-artifact" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-docc-symbolkit" name="swift-docc-symbolkit" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-driver" name="swift-driver" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-experimental-string-processing" name="swift-experimental-string-processing" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-format" name="swift-format" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-foundation" name="swift-foundation" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-llbuild" name="swift-llbuild" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-llbuild2" name="swift-llbuild2" remote="apple" revision="2.0.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-lmdb" name="swift-lmdb" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-log" name="swift-log" remote="apple" revision="1.15.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-markdown" name="swift-markdown" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-nio" name="swift-nio" remote="apple" revision="2.103.0" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-os-overlay" name="swift-os-overlay" remote="LibreDarwin" revision="swift-os-overlay-1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-package-manager" name="swift-package-manager" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-sdk-generator" name="swift-sdk-generator" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-syntax" name="swift-syntax" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-system" name="swift-system" remote="apple" revision="1.8.1" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-testing" name="swift-testing" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-toolchain-sqlite" name="swift-toolchain-sqlite" remote="swiftlang" revision="1.0.13" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-tools-protocols" name="swift-tools-protocols" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/swift-tools-support-core" name="swift-tools-support-core" remote="swiftlang" revision="release/swift-6.4.0-RELEASE" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/tapi" name="tapi" remote="apple-oss-distributions" revision="tapi-1600.0.11.8" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/vmmap" name="vmmap" remote="trungnt2910" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/XCBuild" name="XCBuild" remote="LibreDarwin" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/xcode-project-format" name="xcode-project-format" remote="apple" revision="main" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/XCSelect" name="XCSelect" remote="LibreDarwin" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/XCTest" name="XCTest" remote="LibreDarwin" revision="master" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/yacc" name="yacc" remote="apple-oss-distributions" revision="yacc-8" groups="devel" />
+  <project path="DarwinSrc/DeveloperTools/Sources/zstd" name="zstd" remote="facebook" revision="main" groups="devel" />
+
+  <!-- =================================================================== -->
+  <!-- Kernel                                                              -->
+  <!-- =================================================================== -->
+  <project path="DarwinSrc/Kernel/Sources/extenTools" name="extenTools" remote="apple-oss-distributions" revision="extenTools-17.3" groups="kernel" />
+  <project path="DarwinSrc/Kernel/Sources/KernelKit" name="KernelKit" remote="LibreDarwin" revision="main" groups="kernel" />
+  <project path="DarwinSrc/Kernel/Sources/kext_tools" name="kext_tools" remote="apple-oss-distributions" revision="kext_tools-779" groups="kernel" />
+  <project path="DarwinSrc/Kernel/Sources/xnu" name="xnu" remote="apple-oss-distributions" revision="xnu-12377.121.6" groups="kernel" />
+
+  <!-- =================================================================== -->
+  <!-- MediaServices                                                       -->
+  <!-- =================================================================== -->
+  <project path="DarwinSrc/MediaServices/Sources/AVFoundation" name="AVFoundation" remote="LibreDarwin" revision="main" groups="media" />
+  <project path="DarwinSrc/MediaServices/Sources/CompositorServices" name="CompositorServices" remote="LibreDarwin" revision="main" groups="media" />
+  <project path="DarwinSrc/MediaServices/Sources/CoreGraphics" name="CoreGraphics" remote="LibreDarwin" revision="main" groups="media" />
+  <project path="DarwinSrc/MediaServices/Sources/GLKit" name="GLKit" remote="LibreDarwin" revision="main" groups="media" />
+  <project path="DarwinSrc/MediaServices/Sources/Metal" name="Metal" remote="LibreDarwin" revision="main" groups="media" />
+  <project path="DarwinSrc/MediaServices/Sources/metal-cpp" name="metal-cpp" remote="apple-oss-distributions" revision="release/metal-cpp_macOS27_iOS27" groups="media" />
+  <project path="DarwinSrc/MediaServices/Sources/Quartz" name="Quartz" remote="LibreDarwin" revision="main" groups="media" />
+  <project path="DarwinSrc/MediaServices/Sources/QuartzComposer" name="QuartzComposer" remote="LibreDarwin" revision="main" groups="media" />
+  <project path="DarwinSrc/MediaServices/Sources/QuartzCore" name="QuartzCore" remote="LibreDarwin" revision="main" groups="media" />
+  <project path="DarwinSrc/MediaServices/Sources/QuartzFilters" name="QuartzFilters" remote="LibreDarwin" revision="main" groups="media" />
+  <project path="DarwinSrc/MediaServices/Sources/SceneKit" name="SceneKit" remote="LibreDarwin" revision="main" groups="media" />
+  <project path="DarwinSrc/MediaServices/Sources/SpriteKit" name="SpriteKit" remote="LibreDarwin" revision="main" groups="media" />
+
+  <!-- =================================================================== -->
+  <!-- ServerServices                                                      -->
+  <!-- =================================================================== -->
+  <project path="DarwinSrc/ServerServices/Sources/amavisd" name="amavisd" remote="apple-oss-distributions" revision="amavisd-140" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/apache" name="apache" remote="apple-oss-distributions" revision="apache-886" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/apache_mod_bonjour" name="apache_mod_bonjour" remote="apple-oss-distributions" revision="apache_mod_bonjour-23" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/apache_mod_bw" name="apache_mod_bw" remote="apple-oss-distributions" revision="apache_mod_bw-205" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/apache_mod_encoding2" name="apache_mod_encoding2" remote="apple-oss-distributions" revision="apache_mod_encoding2-208" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/apache_mod_hfs_apple" name="apache_mod_hfs_apple" remote="apple-oss-distributions" revision="apache_mod_hfs_apple-20" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/apache_mod_perl" name="apache_mod_perl" remote="apple-oss-distributions" revision="apache_mod_perl-117" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/BerkeleyDB" name="BerkeleyDB" remote="apple-oss-distributions" revision="BerkeleyDB-29" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/bind9" name="bind9" remote="apple-oss-distributions" revision="bind9-65" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/bootp" name="bootp" remote="apple-oss-distributions" revision="bootp-534.120.2" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/ChatServer" name="ChatServer" remote="apple-oss-distributions" revision="ChatServer-409" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/clamav" name="clamav" remote="apple-oss-distributions" revision="clamav-158" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/CPAN" name="CPAN" remote="apple-oss-distributions" revision="CPAN-105" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/CPANInternal" name="CPANInternal" remote="apple-oss-distributions" revision="CPANInternal-162" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/CyrusIMAP" name="CyrusIMAP" remote="apple-oss-distributions" revision="CyrusIMAP-191" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/dovecot" name="dovecot" remote="apple-oss-distributions" revision="dovecot-293" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/FastCGI" name="FastCGI" remote="apple-oss-distributions" revision="FastCGI-4" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/fetchmail" name="fetchmail" remote="apple-oss-distributions" revision="fetchmail-33" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/foundationdb" name="foundationdb" remote="apple-oss-distributions" revision="main" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/freeradius" name="freeradius" remote="apple-oss-distributions" revision="freeradius-42" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/HTTPServer" name="HTTPServer" remote="apple-oss-distributions" revision="HTTPServer-11" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/mailman" name="mailman" remote="apple-oss-distributions" revision="mailman-138" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/memcached" name="memcached" remote="apple-oss-distributions" revision="memcached-9" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/MySQL" name="MySQL" remote="apple-oss-distributions" revision="MySQL-55" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/net_snmp" name="net_snmp" remote="apple-oss-distributions" revision="net_snmp-1723" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/postfix" name="postfix" remote="apple-oss-distributions" revision="postfix-1636" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/PostgreSQL" name="PostgreSQL" remote="apple-oss-distributions" revision="PostgreSQL-207.14" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/procmail" name="procmail" remote="apple-oss-distributions" revision="procmail-14" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/pyobjc" name="pyobjc" remote="apple-oss-distributions" revision="pyobjc-63" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/pyOpenSSL" name="pyOpenSSL" remote="apple-oss-distributions" revision="pyOpenSSL-8" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/PyRSS2Gen" name="PyRSS2Gen" remote="apple-oss-distributions" revision="PyRSS2Gen-5" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/python_dateutil" name="python_dateutil" remote="apple-oss-distributions" revision="python_dateutil-5" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/python_modules" name="python_modules" remote="apple-oss-distributions" revision="python_modules-92" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/ruby_dnssd" name="ruby_dnssd" remote="apple-oss-distributions" revision="ruby_dnssd-6" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/ruby_libxml" name="ruby_libxml" remote="apple-oss-distributions" revision="ruby_libxml-8" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/RubyCocoa" name="RubyCocoa" remote="apple-oss-distributions" revision="RubyCocoa-80" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/RubyOnRails" name="RubyOnRails" remote="apple-oss-distributions" revision="RubyOnRails-28.1" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/samba" name="samba" remote="apple-oss-distributions" revision="samba-235.7" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/sendmail" name="sendmail" remote="apple-oss-distributions" revision="sendmail-40" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/smb" name="smb" remote="apple-oss-distributions" revision="smb-759.40.1" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/SpamAssassin" name="SpamAssassin" remote="apple-oss-distributions" revision="SpamAssassin-169" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/SquirrelMail" name="SquirrelMail" remote="apple-oss-distributions" revision="SquirrelMail-36" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/Twisted" name="Twisted" remote="apple-oss-distributions" revision="Twisted-17" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/TwistedWords" name="TwistedWords" remote="apple-oss-distributions" revision="TwistedWords-3" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/TwistedXish" name="TwistedXish" remote="apple-oss-distributions" revision="TwistedXish-3" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/WebmailServer" name="WebmailServer" remote="apple-oss-distributions" revision="WebmailServer-10.4" groups="server" />
+  <project path="DarwinSrc/ServerServices/Sources/xinetd" name="xinetd" remote="apple-oss-distributions" revision="xinetd-35" groups="server" />
+
+  <!-- =================================================================== -->
+  <!-- UnixServices                                                      -->
+  <!-- =================================================================== -->
+  <project path="DarwinSrc/ServerServices/Sources/blojsom" name="blojsom" remote="apple-oss-distributions" revision="blojsom-67" groups="unix" />
+  <project path="DarwinSrc/ServerServices/Sources/cups" name="cups" remote="apple-oss-distributions" revision="cups-522.4" groups="unix" />
+  <project path="DarwinSrc/ServerServices/Sources/efax" name="efax" remote="apple-oss-distributions" revision="efax-42" groups="unix" />
+  <project path="DarwinSrc/ServerServices/Sources/gimp_print" name="gimp_print" remote="apple-oss-distributions" revision="gimp_print-11" groups="unix" />
+  <project path="DarwinSrc/ServerServices/Sources/graphviz" name="graphviz" remote="apple-oss-distributions" revision="graphviz-1009" groups="unix" />
+  <project path="DarwinSrc/ServerServices/Sources/gutenprint" name="gutenprint" remote="apple-oss-distributions" revision="gutenprint-5" groups="unix" />
+  <project path="DarwinSrc/ServerServices/Sources/JBoss" name="JBoss" remote="apple-oss-distributions" revision="JBoss-737.1" groups="unix" />
+  <project path="DarwinSrc/ServerServices/Sources/lukemftp" name="lukemftp" remote="apple-oss-distributions" revision="lukemftp-16" groups="unix" />
+  <project path="DarwinSrc/ServerServices/Sources/tidy" name="tidy" remote="apple-oss-distributions" revision="tidy-20.1" groups="unix" />
+  <project path="DarwinSrc/ServerServices/Sources/wget" name="wget" remote="apple-oss-distributions" revision="wget-5" groups="unix" />
+
+</manifest>
