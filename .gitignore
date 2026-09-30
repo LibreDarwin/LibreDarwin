@@ -1,0 +1,13 @@
+.DS_Store
+Applications/
+Boot/
+BrowserEngine/
+Build/
+CoreOS/
+CoreServices/
+DeveloperTools/
+Kernel/
+MediaServices/
+ServerServices/
+Tools/
+UnixServices/
